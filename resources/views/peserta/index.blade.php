@@ -37,6 +37,7 @@
                             <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Phone</th>
                             <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Picture</th>
                             <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Status</th>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Tgl. Input</th>
 
                              <th class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 216px;">Action</th>
                          </tr>

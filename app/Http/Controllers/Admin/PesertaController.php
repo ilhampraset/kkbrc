@@ -37,6 +37,7 @@ class PesertaController extends Controller
             $row[] = file_exists(public_path('img/peserta/'.$list->picture)) ? '<img src="'.url('img/peserta/'.$list->picture).'" width="200px" height="200px"/>' : '<img src="#" />';
             // $row[] = url('img/peserta/'.$list->picture);
             $row[] = is_null($list->status) ? '' : '<strong class="'.@config('flag_peserta.color-'.$list->status).'">'.@config('flag_peserta.'.$list->status).'</strong>';
+            $row[] = empty($list->created_at) ? '' : date_format(date_create($list->created_at), 'd F Y, H:i:s');
 
             $row[] = "<div align='center'>
                 <button id='btn-ubah' type='button' onclick='edit(" .$list->id. ")' class='btn btn-warning btn-xs'><i class='fa fa-edit'></i></button>
