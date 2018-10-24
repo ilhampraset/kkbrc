@@ -45,6 +45,9 @@ Route::get('/pembayaran', function () {
 Route::get('/rules-of-regulation', function () {
     return view('guest.rules.index');
 });
+Route::get('/schedule', function () {
+    return view('guest.schedule.index');
+});
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');

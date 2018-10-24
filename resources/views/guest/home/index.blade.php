@@ -23,19 +23,7 @@
 
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="{{asset('/css/style.css')}}" />
-	<style>
-		.no-js #loader { display: none;  }
-		.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-		.se-pre-con {
-			position: fixed;
-			left: 0px;
-			top: 0px;
-			width: 100%;
-			height: 100%;
-			z-index: 9999;
-			background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
-		}
-</style>
+
 	
 </head>
 <body>
@@ -70,10 +58,10 @@
 				<ul class="main-nav nav navbar-nav navbar-right">
 					<li><a href="/home">Home</a></li>
 			          <li><a href="/rules-of-regulation">Rules of Regulations</a></li>
-			          <!-- <li><a href="/schedule">Schedule</a></li> -->
+			          <li><a href="/schedule">Schedule</a></li>
 			          <li><a href="/judges">Judges</a></li>
 			          <!-- <li><a href="/sponsors">Sponsors</a></li> -->
-					  <li><a href="/register">Register</a></li>
+					  <li><a href="/register-kkbrc">Register</a></li>
 				</ul>
 			</nav>
 			<!-- /Navigation -->

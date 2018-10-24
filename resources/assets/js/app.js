@@ -31,6 +31,7 @@ Vue.component("countdownhome", require("./components/home/Countdown.vue"));
 Vue.component("contacthome", require("./components/home/Contact.vue"));
 Vue.component("pembayaran-component", require("./components/Pembayaran.vue"));
 Vue.component("rules-component", require("./components/Rules.vue"));
+Vue.component("schedule-component", require("./components/Schedule.vue"));
 const app = new Vue({
   el: "#app"
 });

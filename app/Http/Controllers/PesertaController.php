@@ -34,29 +34,44 @@ class PesertaController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->coffeeshopName)
+        if($request->file('image'))
         {
-            DB::table('peserta')->insert([
-                ['nama'=>$request->name,
-                  'email'=>$request->email,
-                  'represent'=>$request->represent,
-                  'coffeeshop'=>$request->coffeeshopName,
-                ]
-             ]);  
+          $image = $request->file('image');
+          $name = time().$image->getClientOriginalName();
+          $image->move(public_path().'/img/peserta/', $name);
+            if($request->coffeeshopName)
+            {
+                DB::table('peserta')->insert([
+                    ['nama'=>$request->name,
+                    'email'=>$request->email,
+                    'represent'=>$request->represent,
+                    'coffeeshop'=>$request->coffeeshopName,
+                    'phoneNumber'=> $request->phoneNumber,
+                    'picture' => $name,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'status' => 0
+                    ]
+                ]);  
 
-            response()->json(['message' => 'success']);
+                return response()->json(['message' => 'success']);
+            }
+            else {
+                
+                DB::table('peserta')->insert([
+                    ['nama'=>$request->name,
+                    'email'=>$request->email,
+                    'represent'=>$request->represent,
+                    'phoneNumber'=> $request->phoneNumber,
+                    'picture' => $name,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'status' => 0
+                    ]
+                ]);    
+                
+                return response()->json(['message' => 'success']);
+            }
         }
-        else {
-              
-              DB::table('peserta')->insert([
-                ['nama'=>$request->name,
-                  'email'=>$request->email,
-                  'represent'=>$request->represent,
-                ]
-            ]);    
-            
-              return response()->json(['message' => 'success']);
-        }
+        
     }
 
     /**

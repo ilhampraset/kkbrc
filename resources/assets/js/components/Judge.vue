@@ -45,7 +45,8 @@ export default {
         { name: "Laila Dimyati", img: "laila_dimyati.jpg" },
         { name: "Dwi Kartika Sari ", img: "dwi_sari_kartika.jpg" },
         { name: "Echi Mahardika", img: "echi_mahardika.jpg" },
-        { name: "Andri Mahardika", img: "andri-mahardika.jpg" }
+        { name: "Andri Mahardika", img: "andri-mahardika.jpg" },
+        { name: "Christian", img: "christian.jpg" }
       ]
     };
   }
