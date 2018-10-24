@@ -76,8 +76,9 @@ Route::group(['middleware' => ['auth']], function() {
         return view('dashboard.index');
     });
 
-  
-   
+    Route::resource('peserta', 'Admin\PesertaController');
+    Route::get('pesertadata', 'Admin\PesertaController@listData');
+
     Route::resource('individu', 'IndividuController');
     Route::get('individudata', 'IndividuController@listData');
 
@@ -91,7 +92,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('parameter_sub_kriteriadata', 'ParametersubkriteriaController@listData');
 
     Route::get('/user/home', function(){
-        return view('user/index');      
+        return view('user/index');
         })->middleware('role:user');
 
     Route::get('/user/profile-acuan','FrontEndController@profileAcuan')->middleware('role:user');
@@ -112,14 +113,14 @@ Route::group(['middleware' => ['auth']], function() {
 /*Route::group(['middleware' => ['auth', 'role:user']], function() {
 
      Route::get('/', function(){
-        return view('user/index');      
+        return view('user/index');
         });
 
      Route::get('/home', function(){
-        return view('user/index');      
+        return view('user/index');
         });
 
-    
+
 
 
 
@@ -128,10 +129,3 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 */
-
-
-   
-
- 
-
-

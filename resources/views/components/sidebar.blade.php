@@ -4,7 +4,11 @@
 		<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 		        <div class="menu_section">
 		            <ul class="nav side-menu">
-		            @role('admin')
+						<li><a href="{{url('dashboard')}}"><i class="fa fa-home"></i> Dashboard </a></li>
+						<li><a href="{{url('peserta')}}"><i class="fa fa-home"></i> Peserta</a></li>
+						<li><a href="{{url('judge')}}"><i class="fa fa-home"></i> Judges</a></li>
+						<li><a href="{{url('sponsor')}}"><i class="fa fa-home"></i> Sponsor</a></li>
+		            {{-- @role('admin')
 		              <li><a href="{{url('dashboard')}}"><i class="fa fa-home"></i> Dashboard </a></li>
 		              <li><a href="{{url('peserta')}}"><i class="fa fa-home"></i> Peserta</a></li>
 		              <li><a href="{{url('judge')}}"><i class="fa fa-home"></i> Judges</a></li>
@@ -16,14 +20,14 @@
 		              <li><a href="{{url('user/profile-acuan')}}"><i class="fa fa-home"></i> Data Profile Acuan </a></li>
 		              <li><a href="{{url('user/data_dan_perhitungan')}}"><i class="fa fa-home"></i> Data Profile </a></li>
 		              <li><a href="{{url('user/data_perangkingan')}}"><i class="fa fa-home"></i> Perangkingan</a></li>
-		              @endrole
+		              @endrole --}}
 
 		            </ul>
 		        </div>
 		</div>
 
 		<!-- /top navigation -->
-    
+
    		 <!--top-nav-menu-->
         <!-- /menu footer buttons -->
 	    <div class="sidebar-footer hidden-small">
