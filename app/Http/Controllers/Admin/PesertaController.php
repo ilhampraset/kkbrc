@@ -33,8 +33,8 @@ class PesertaController extends Controller
             $row[] = $list->email;
             $row[] = $list->represent;
             $row[] = $list->coffeeshop;
-            $row[] = $list->phone;
-            $row[] = file_exists(public_path('img/peserta/'.$list->picture)) ? '<img src="'.url('img/peserta/'.$list->picture).'" />' : '<img src="#" />';
+            $row[] = $list->phoneNumber;
+            $row[] = file_exists(public_path('img/peserta/'.$list->picture)) ? '<img src="'.url('img/peserta/'.$list->picture).'" width="200px" height="200px"/>' : '<img src="#" />';
             // $row[] = url('img/peserta/'.$list->picture);
             $row[] = is_null($list->status) ? '' : '<strong class="'.@config('flag_peserta.color-'.$list->status).'">'.@config('flag_peserta.'.$list->status).'</strong>';
 
