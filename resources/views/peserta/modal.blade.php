@@ -56,6 +56,13 @@
                                 <span class="help-block"></span>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-md-4 col-sm-4 col-xs-12 control-label">Domicile</label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <input id="domicile" name="domicile" class="form-control input-xs" placeholder="Domicile" type="text">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

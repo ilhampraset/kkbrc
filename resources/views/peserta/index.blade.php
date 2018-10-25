@@ -35,9 +35,10 @@
                             <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Represent</th>
                             <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Coffeshop</th>
                             <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Phone</th>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Domicile</th>
                             <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Picture</th>
                             <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Status</th>
-                            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Tgl. Input</th>
+                            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 298px;">Tgl. Daftar</th>
 
                              <th class="sorting_disabled text-center" rowspan="1" colspan="1" style="width: 216px;">Action</th>
                          </tr>
@@ -152,7 +153,8 @@ function edit(id){
        $('#email').val(data.email);
        $('#represent').val(data.represent);
        $('#coffeeshop').val(data.coffeeshop);
-       $('#phone').val(data.phone);
+       $('#phone').val(data.phoneNumber);
+       $('#domicile').val(data.domicile);
        $('#picture').val(data.picture);
        $('#status').val(data.status);
 
