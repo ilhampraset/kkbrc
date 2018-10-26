@@ -63,6 +63,7 @@ var table, save_method;
 $(function(){
 table = $('.table').DataTable({
      "processing" : true,
+     "iDisplayLength": 50,
      "ajax" : {
        "url" : "{{ url('pesertadata') }}",
        "type" : "GET"
@@ -174,7 +175,7 @@ function delete_merk(id)
 
     swal({
         title: 'Are you sure?',
-        text: "You will not be able to recover this imaginary file!",
+        text: "Sure delete this data? (To recover deleted data, please contact our developer)",
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
@@ -186,15 +187,13 @@ function delete_merk(id)
     if (result.value) {
 
             $.ajax({
-                url : "individu/"+id,
+                url : "peserta/"+id,
                 type: "POST",
                 data : {'_method' : 'DELETE', '_token' : $('meta[name=csrf-token]').attr('content')},
                 success: function(data)
                 {
                     table.ajax.reload();
                     swal('Good job!','Berhasil Mengapus Data','success');
-
-
                 },
                 error: function (jqXHR, textStatus, errorThrown)
                 {

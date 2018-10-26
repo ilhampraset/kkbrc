@@ -42,6 +42,7 @@ class PesertaController extends Controller
 
             $row[] = "<div align='center'>
                 <button id='btn-ubah' type='button' onclick='edit(" .$list->id. ")' class='btn btn-warning btn-xs'><i class='fa fa-edit'></i></button>
+                <button id='btn-ubah' type='button' onclick='delete_merk(" .$list->id. ")' class='btn btn-danger btn-xs'><i class='fa fa-trash-o'></i></button>
                 </div>";
             $data[] = $row;
         }
@@ -156,6 +157,9 @@ class PesertaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $peserta = Peserta::find($id);
+
+        $peserta->delete();
+        return response()->json(['message' => 'success']);
     }
 }
